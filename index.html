@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <h2 align="center" style="font-size: 40px;">Search Teable </h2>
+
+    <input type="text"  style="width:493px;margin-left:33.7%;height:40px;" onkeyup="searchf()" placeholder="Search Namer">
+
+
+    <br>
+    <br>
+    <table border="1" width="500px" style="height:300px;" align="center">
+        <tr align="center">
+            <th>Id</th>
+            <th>Name</th>
+            <th>roll</th>
+        </tr>
+        <tr align="center">
+            <td>1</td>
+            <td>hritwik</td>
+            <td>70</td>
+        </tr>
+        <tr align="center">
+            <td>2</td>
+            <td>roy</td>
+            <td>60</td>
+        </tr>
+        <tr align="center">
+            <td>3</td>
+            <td>roy hritwik</td>
+            <td>50</td>
+        </tr>
+        <tr align="center">
+            <td>4</td>
+            <td>tubai</td>
+            <td>40</td>
+        </tr>
+        <tr align="center">
+            <td>5</td>
+            <td>raja</td>
+            <td>30</td>
+        </tr>
+        <tr align="center">
+            <td>6</td>
+            <td>abhijit</td>
+            <td>20</td>
+        </tr>
+        <tr align="center">
+            <td>7</td>
+            <td>bibek</td>
+            <td>10</td>
+        </tr>
+        <tr align="center">
+            <td>8</td>
+            <td>bibek</td>
+            <td>10</td>
+        </tr>
+
+
+    </table>
+
+
+    <script>
+        function searchf(){
+            document.querySelector("table").style.height="40px";
+            var s=document.querySelector("input").value.toLocaleUpperCase();
+        for(var i=1;i<=document.querySelectorAll("table tr").length;i++){
+        var t=document.querySelectorAll("table tr")[i];
+        var t1=t.querySelectorAll("td")[1].innerText.toLocaleUpperCase();
+
+        if(s==t1){
+            document.querySelector("table").style.height="40px";
+            //document.querySelectorAll("table tr")[i].style.height="40px";
+            document.querySelectorAll("table tr")[i].style.display="";
+            
+
+        }
+        else{
+      document.querySelectorAll("table tr")[i].style.display="none";
+        }
+        }
+
+        }
+        
+      
+    </script>
+
+
+</body>
+</html>
